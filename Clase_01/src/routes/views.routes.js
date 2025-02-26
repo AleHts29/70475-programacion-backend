@@ -42,26 +42,5 @@ router.get('/deleteCookie', (req, res) => {
 
 
 
-
-/*=============================================
-=                   2da Parte                 =
-=============================================*/
-router.get('/session', (req, res) => {
-
-})
-
-router.get('/logout', (req, res) => {
-
-})
-
-
-router.get('/login', (req, res) => {
-
-})
-
-
-
-//Auth middleware:
-
 // Export
 export default router;
