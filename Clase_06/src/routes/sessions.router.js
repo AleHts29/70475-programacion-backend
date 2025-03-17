@@ -79,8 +79,8 @@ router.post("/login", async (req, res) => {
         //2do con Cookie
         res.cookie("jwtCookieToken", access_token, {
             maxAge: 60000,
-            httpOnly: true, // iNo se expone la cookie
-            // secure: false // si está en HTTPS, si no, no se expone la cookie
+            httpOnly: true, // No se expone la cookie
+            // httpOnly: false // si está en HTTPS, si no, no se expone la cookie
         })
 
         res.send({ message: "Login successfull" })

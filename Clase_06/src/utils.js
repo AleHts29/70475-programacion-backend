@@ -3,6 +3,7 @@ import { dirname } from 'path';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import passport from 'passport';
+import { log } from 'console';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -80,6 +81,8 @@ export const passportCall = (strategy) => {
 export const cookieExtractor = req => {
     let token = null;
     console.log("CookieExtractor");
+    console.log(req);
+
 
     if (req && req.cookies) {
         console.log("Cookies presentes: ");
