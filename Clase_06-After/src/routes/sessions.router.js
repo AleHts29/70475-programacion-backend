@@ -40,7 +40,8 @@ router.post("/login", async (req, res) => {
             name: `${user.first_name} ${user.last_name}`,
             email: user.email,
             age: user.age,
-            role: user.role
+            role: user.role,
+            isAdmin: user.role === "admin"
         }
 
         // genramos el JWT
@@ -62,5 +63,14 @@ router.post("/login", async (req, res) => {
         return res.status(500).send({ status: "error", error: "Error interno de la applicacion." });
     }
 })
+
+
+
+router.get("/logout", (req, res) => {
+    res.clearCookie("jwtCookieToken");
+    res.redirect("/users/login");
+});
+
+
 
 export default router

@@ -80,7 +80,7 @@ export const authorization = (role) => {
 
 
         if (req.user.role !== role) {
-            return res.status(403).send("Forbidden: El usuario no tiene permisos con este rol.");
+            return res.status(403).send("Forbidden: El usuario no tiene permisos con este rol, comuniquese con el administrador");
         }
 
         next();

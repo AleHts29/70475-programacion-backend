@@ -29,17 +29,6 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
 
-const urlMongo = process.env.MONGO_URL
-app.use(session({
-    store: MongoStore.create({
-        mongoUrl: urlMongo,
-        ttl: 60
-    }),
-    secret: "coderS3cr3t",
-    resave: false,
-    saveUninitialized: true
-}));
-
 
 //Cookies
 //router.use(cookieParser());
@@ -48,7 +37,6 @@ app.use(cookieParser("CoderS3cr3tC0d3"));
 // COnfiguracion de PASSPORT
 initializePassport() // <- Ejecucioon
 app.use(passport.initialize())
-//app.use(passport.session());
 
 
 //Declare routers:
@@ -61,7 +49,7 @@ app.listen(SERVER_PORT, () => {
     console.log("Servidor escuchando por el puerto: " + SERVER_PORT);
 });
 
-
+const urlMongo = process.env.MONGO_URL
 const connectMongoDB = async () => {
     try {
         await mongoose.connect(urlMongo);
