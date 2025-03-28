@@ -1,6 +1,5 @@
 // Import de Services - es el puente entre los controller y capa de acceso a los datos
-
-import ProductsService from '../services/products.services.js'
+import ProductsService from '../../services/products.services.js'
 const productsService = new ProductsService()
 
 const getDatosControllers = async (req, res) => {
