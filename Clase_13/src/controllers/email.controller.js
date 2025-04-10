@@ -21,17 +21,30 @@ transporter.verify(function (error, success) {
 });
 
 const mailOptions = {
+<<<<<<< HEAD
     from: "Coder Test " + config.gmailAccount,
     to: config.gmailAccount,
     subject: "Correo de prueba Coderhouse Programacion Backend clase 30.",
     html: "<div><h1>Esto es un Test de envio de correos con Nodemailer!</h1></div>",
+=======
+    from: 'Ale-Wyne ' + config.gmailAccount,
+    to: "matiascatuogno@gmail.com",
+    subject: "Correo de prueba de Coder-Wyne por la compra de vinos",
+    html: '<div><h1> Esto es un test!!</h1></div>',
+>>>>>>> 80c9e3a (clase13)
     attachments: []
 }
 
 const mailOptionsWithAttachments = {
+<<<<<<< HEAD
     from: "Coder Test " + config.gmailAccount,
     to: config.gmailAccount,
     subject: "Correo de prueba Coderhouse Programacion Backend clase 30.",
+=======
+    from: 'Ale-Wyne ' + config.gmailAccount,
+    to: "matiascatuogno@gmail.com",
+    subject: "Correo de prueba de Coder-Wyne por la compra de vinos",
+>>>>>>> 80c9e3a (clase13)
     html: `<div>
                 <h1>Esto es un Test de envio de co rreos con Nodemailer!</h1>
                 <p>Ahora usando imagenes: </p>

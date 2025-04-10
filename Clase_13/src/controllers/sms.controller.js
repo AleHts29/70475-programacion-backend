@@ -43,9 +43,16 @@ export const sendSMS = async (req, res) => {
         res.status(500).send({ error: error });
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 
+=======
+}
+
+
+
+>>>>>>> 80c9e3a (clase13)
 // Usando Whatsapp
 // https://www.twilio.com/docs/whatsapp/tutorial/send-whatsapp-notification-messages-templates
 
@@ -67,7 +74,11 @@ client.messages
 */
 
 //TODO: Se debe habilitar el Connect to WhatsApp Sandbox
+<<<<<<< HEAD
 // https://console.twilio.com/us1/develop/sms/try-it-out/whatsapp-learn?frameUrl=%2Fconsole%2Fsms%2Fwhatsapp%2Flearn%3Fx-target-region%3Dus1
 =======
 }
 >>>>>>> 44ea6ad (clase13)
+=======
+// https://console.twilio.com/us1/develop/sms/try-it-out/whatsapp-learn?frameUrl=%2Fconsole%2Fsms%2Fwhatsapp%2Flearn%3Fx-target-region%3Dus1
+>>>>>>> 80c9e3a (clase13)
