@@ -14,8 +14,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //Declare routers:
+<<<<<<< HEAD
 app.use("/api/email", emailRouter);
 app.use("/api/sms", smsRouter);
+=======
+app.use("/api/email", emailRouter);// nodemailer
+app.use("/api/sms", smsRouter); // Twilio
+>>>>>>> 44ea6ad (clase13)
 
 const SERVER_PORT = config.port;
 app.listen(SERVER_PORT, () => {

@@ -2,23 +2,47 @@ import BusinessService from "../services/dao/business.dao.js";
 import config from "../config/config.js";
 import twilio from 'twilio';
 
+<<<<<<< HEAD
 const twilioClient = twilio(config.twilioAccountSID, config.twilioAuthToken);
+=======
+
+
+
+const twilioClient = twilio(config.twilioAccountSID, config.twilioAuthToken);
+
+
+>>>>>>> 44ea6ad (clase13)
 const twilioSMSOptions = {
     body: "Esto es un mensaje SMS de prueba usando Twilio desde Coderhouse.",
     from: config.twilioSmsNumber,
     to: config.twilioToSmsNumber
 }
 
+<<<<<<< HEAD
 export const sendSMS = async (req, res) => {
     try {
         console.log("Enviando SMS using Twilio account.");
         console.log(twilioClient);
         const result = await twilioClient.messages.create(twilioSMSOptions);
         res.send({ message: "Success!", payload: result });
+=======
+
+export const sendSMS = async (req, res) => {
+    try {
+
+        console.log("Enviando SMS using Twilio account.");
+        console.log(twilioClient);
+
+
+        const result = await twilioClient.messages.create(twilioSMSOptions);
+
+        res.send({ message: "Success", payload: result })
+>>>>>>> 44ea6ad (clase13)
     } catch (error) {
         console.error("Hubo un problema enviando el SMS usando Twilio.");
         res.status(500).send({ error: error });
     }
+<<<<<<< HEAD
 }
 
 
@@ -44,3 +68,6 @@ client.messages
 
 //TODO: Se debe habilitar el Connect to WhatsApp Sandbox
 // https://console.twilio.com/us1/develop/sms/try-it-out/whatsapp-learn?frameUrl=%2Fconsole%2Fsms%2Fwhatsapp%2Flearn%3Fx-target-region%3Dus1
+=======
+}
+>>>>>>> 44ea6ad (clase13)
